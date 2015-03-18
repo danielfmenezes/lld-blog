@@ -1,0 +1,49 @@
+{
+      __                ___       ___          __   ___  __        __   __          __
+|    /  \ |  | __ |    |__  \  / |__  |       |  \ |__  |__) |  | / _` / _` | |\ | / _`
+|___ \__/ |/\|    |___ |___  \/  |___ |___    |__/ |___ |__) \__/ \__> \__> | | \| \__>
+
+http://lowleveldebugging.wordpress.com/
+
+danielmenezes at gmail dot com
+
+}
+unit MainForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Button1: TButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Application.Terminate;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+  Form2.Close;
+end;
+
+end.
